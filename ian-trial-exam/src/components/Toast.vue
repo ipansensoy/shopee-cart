@@ -39,7 +39,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style scoped lang="scss">
 .alert {
   width: 30%;
   background-color: rgba(0, 0, 0, 0.7);

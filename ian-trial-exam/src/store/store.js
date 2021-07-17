@@ -17,6 +17,12 @@ export const store = new Vuex.Store({
     cartSize: (state) => {
       return state.cart.length;
     },
+    cartTotalQty: (state) => {
+      return state.cart.reduce((result, product) => {
+        result += Number(product.quantity);
+        return result;
+      }, 0);
+    },
     cartTotalAmount: (state) => {
       return state.cart.reduce((total, product) => {
         return total + product.price * product.quantity;
