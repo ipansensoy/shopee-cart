@@ -20,8 +20,13 @@
 * create a Pull Request to this repository
 
 ## Installation
-* `You Installation Guide Here`
-
+# navigate thru the directory 
+  `cd ian-trial-exam`
+# install dependencies
+   `npm install`
+# start the dev server
+  `npm run dev`
+  
 ## Create Simple Shopping Cart 
 Please see the Attached `gif` for the Design
 * List all the Products 
