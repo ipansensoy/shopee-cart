@@ -1,22 +1,21 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Cart from "../views/Cart.vue";
-import Product from '../views/Product.vue';
-
+import Product from "../views/Product.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
+    path: "/",
+    name: "Home",
     component: Product,
   },
   {
     path: "/my-cart",
     name: "Cart",
     component: Cart,
-  }
+  },
 ];
 
 const router = new VueRouter({
