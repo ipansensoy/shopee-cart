@@ -1,8 +1,7 @@
 <template>
   <div>
     <navbar></navbar>
-    <products></products>
-    <cart></cart>
+    <router-view />
     <toast
       :show="toast.show"
       :text="toast.text"
@@ -12,8 +11,6 @@
 </template>
 <script>
 import Navbar from "./components/Navbar.vue";
-import Products from "./components/Products.vue";
-import Cart from "./components/Cart.vue";
 import Toast from "./components/Toast.vue";
 
 export default {
@@ -22,8 +19,6 @@ export default {
   },
   components: {
     Navbar,
-    Products,
-    Cart,
     Toast,
   },
   computed: {

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mt-5 py-2">
     <h1 class="my-2">
       Cart <span class="badge badge-secondary">{{ cartSize }} products</span>
     </h1>
