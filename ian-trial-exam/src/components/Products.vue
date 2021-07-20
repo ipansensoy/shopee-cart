@@ -21,6 +21,9 @@ export default {
     SingleProduct,
   },
   computed: {
+    // products() {
+    //   return this.$store.state.products;
+    // },
     ...mapState(["products"]),
   },
   created() {
