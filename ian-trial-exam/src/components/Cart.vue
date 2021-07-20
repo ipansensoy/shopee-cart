@@ -58,6 +58,7 @@ export default {
   data() {
     return {};
   },
+  
   computed: {
     ...mapState(["cart"]),
     ...mapGetters(["cartSize", "cartTotalAmount", "cartTotalQty"]),
