@@ -32,7 +32,7 @@
             <td data-title="Description">$ {{ product.description }}</td>
             <td>
               <button
-                @click="removeFromCart(product.id, product.quantity)"
+                @click="removeFromCart(product.id)"
                 class="btn btn-danger btn-small"
               >
                 Remove from Cart
@@ -58,7 +58,7 @@ export default {
   data() {
     return {};
   },
-  
+
   computed: {
     ...mapState(["cart"]),
     ...mapGetters(["cartSize", "cartTotalAmount", "cartTotalQty"]),
@@ -67,12 +67,14 @@ export default {
     addToCart(id) {
       this.$store.dispatch("addToCart", id);
     },
-    removeFromCart(id, quantity) {
-      if (quantity > 1) {
-        this.$store.dispatch("removeFromCart", id);
-      } else {
-        this.deleteFromCart(id);
-      }
+    removeFromCart(id) {
+      this.$store.dispatch("removeFromCart", id);
+
+      // if (quantity > 1) {
+      //   this.$store.dispatch("removeFromCart", id);
+      // } else {
+      //   this.deleteFromCart(id);
+      // }
     },
     deleteFromCart(id) {
       this.$store.dispatch("deleteFromCart", id);

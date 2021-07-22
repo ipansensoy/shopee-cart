@@ -33,7 +33,7 @@ export default new Vuex.Store({
       return state.toast;
     },
   },
-  
+
   mutations: {
     setUpProducts: (state, productsPayload) => {
       //sets the state's  products property to the products array recieved as payload
@@ -64,8 +64,16 @@ export default new Vuex.Store({
       let product = state.products.find((product) => product.id === productId);
       //find the product in the cart list
       let cartProduct = state.cart.find((product) => product.id === productId);
-
       cartProduct.quantity--;
+      
+      //find the product index in the cart list
+      let cartProductIndex = state.cart.findIndex(
+        (product) => product.id === productId
+      );
+      //remove product from the cart if qty is 0
+      if (cartProduct.quantity == 0) {
+        state.cart.splice(cartProductIndex, 1);
+      }
       //Add back the quantity in products list by 1
       product.quantity++;
     },
