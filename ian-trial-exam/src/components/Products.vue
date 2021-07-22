@@ -15,14 +15,20 @@
 
 <script>
 import SingleProduct from "./SingleProduct.vue";
+import { mapActions, mapState } from "vuex";
+
 export default {
   components: {
     SingleProduct,
   },
+  method: {
+    ...mapActions(["fetchProducts"]),
+  },
   computed: {
-    products() {
-      return this.$store.state.products;
-    },
+    // products() {
+    //   return this.$store.state.products;
+    // },
+    ...mapState(["products"]),
   },
   created() {
     this.$store.dispatch("fetchProducts");

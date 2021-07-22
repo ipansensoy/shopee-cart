@@ -4,16 +4,16 @@ import myApi from "../api";
 
 Vue.use(Vuex);
 
-export const store = new Vuex.Store({
+export default new Vuex.Store({
+  namespaced: true,
   state: {
-    products: null,
+    products: [],
     cart: [],
     toast: {
       text: "",
       show: false,
     },
   },
-
   getters: {
     cartSize: (state) => {
       return state.cart.length;
@@ -33,6 +33,7 @@ export const store = new Vuex.Store({
       return state.toast;
     },
   },
+  
   mutations: {
     setUpProducts: (state, productsPayload) => {
       //sets the state's  products property to the products array recieved as payload
