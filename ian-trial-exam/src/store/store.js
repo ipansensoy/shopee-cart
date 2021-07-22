@@ -13,7 +13,7 @@ export const store = new Vuex.Store({
       show: false,
     },
   },
-  
+
   getters: {
     cartSize: (state) => {
       return state.cart.length;
@@ -118,4 +118,3 @@ export const store = new Vuex.Store({
     },
   },
 });
-
