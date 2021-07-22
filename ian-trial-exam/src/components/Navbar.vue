@@ -30,28 +30,6 @@
       </div>
     </nav>
   </div>
-
-  <!-- <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
-    <div class="cart-item">
-      <router-link to="/my-cart">
-        <i
-          :data-count="cartSize"
-          class="fa fa-shopping-cart icon-grey badge"
-        ></i>
-      </router-link>
-    </div>
-    <div class="navbar-brand"></div>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li>
-          <router-link to="/"> Home </router-link>
-        </li>
-        <li>
-          <router-link to="/"> My Cart </router-link>
-        </li>
-      </ul>
-    </div>
-  </nav> -->
 </template>
 <script>
 import { mapState, mapGetters } from "vuex";
